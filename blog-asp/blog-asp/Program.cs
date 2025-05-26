@@ -13,8 +13,8 @@ builder.Services.AddAuthentication(options =>
     .AddCookie()
     .AddGoogle(options =>
     {
-        options.ClientId = "YOUR_GOOGLE_CLIENT_ID";
-        options.ClientSecret = "YOUR_GOOGLE_CLIENT_SECRET";
+        options.ClientId = "";
+        options.ClientSecret = "";
     });
 
 var app = builder.Build();
