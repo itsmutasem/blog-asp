@@ -1,0 +1,6 @@
+﻿@model BlogApp.Models.Post
+<h2>@Model.Title</h2>
+<p><strong>Author:</strong> @Model.Author</p>
+<p><strong>Date:</strong> @Model.Date.ToShortDateString()</p>
+<p>@Model.Description</p>
+<a href="/" class="btn btn-secondary">Back</a>
