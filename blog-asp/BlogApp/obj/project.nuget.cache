@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fkGMK/RUUUs=",
+  "dgSpecHash": "wiulKBOjAvQ=",
   "success": true,
-  "projectFilePath": "C:\\Users\\dell\\Desktop\\Projects\\blog-asp\\blog-asp\\blog-asp\\blog-asp.csproj",
+  "projectFilePath": "C:\\Users\\dell\\Desktop\\Projects\\blog-asp\\blog-asp\\BlogApp\\BlogApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\dell\\.nuget\\packages\\microsoft.aspnetcore.authentication.google\\9.0.5\\microsoft.aspnetcore.authentication.google.9.0.5.nupkg.sha512"
   ],
