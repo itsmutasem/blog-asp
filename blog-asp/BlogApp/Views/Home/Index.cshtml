@@ -1,8 +1,39 @@
-﻿@{
+﻿@model List<BlogApp.Models.Post>
+@{
     ViewData["Title"] = "Home Page";
 }
-
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<h2 class="mb-4">Posts</h2>
+@if (User.Identity.IsAuthenticated)
+{
+    <a class="btn btn-primary mb-3" href="/Home/Create">New Post</a>
+}
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Date</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var post in Model)
+    {
+        <tr>
+            <td>@post.Id</td>
+            <td>@post.Title</td>
+            <td>@post.Author</td>
+            <td>@post.Date.ToShortDateString()</td>
+            <td>
+                <a class="btn btn-sm btn-info" href="/Home/Details/@post.Id">View</a>
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <a class="btn btn-sm btn-warning" href="/Home/Edit/@post.Id">Edit</a>
+                    <a class="btn btn-sm btn-danger" href="/Home/Delete/@post.Id">Delete</a>
+                }
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
